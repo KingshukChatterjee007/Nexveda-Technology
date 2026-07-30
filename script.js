@@ -2,6 +2,7 @@ const body = document.body;
 const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
+const progressBar = document.getElementById('scrollProgress');
 const scrollTopBtn = document.getElementById('scrollTop');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioCards = document.querySelectorAll('.portfolio-card');
@@ -197,6 +198,9 @@ if (heroCanvas) {
 /* Nav scroll state */
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  if (progressBar) progressBar.style.width = `${scrollPercent}%`;
   if (scrollTopBtn) scrollTopBtn.classList.toggle('show', scrollTop > 400);
   if (header) header.classList.toggle('scrolled', scrollTop > 12);
 });
@@ -232,7 +236,6 @@ let testimonialIndex = 0;
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 const testimonialTrack = document.querySelector('.testimonial-track');
 const testimonialDots = document.querySelectorAll('.t-dot');
-const tProgressBar = document.getElementById('tProgressBar');
 let autoSlideTimer = null;
 
 function showTestimonial(index) {
@@ -245,17 +248,6 @@ function showTestimonial(index) {
   });
   testimonialDots.forEach((dot, pos) => {
     dot.classList.toggle('active', pos === index);
-  });
-  resetProgressTimer();
-}
-
-function resetProgressTimer() {
-  if (!tProgressBar) return;
-  tProgressBar.style.transition = 'none';
-  tProgressBar.style.width = '0%';
-  requestAnimationFrame(() => {
-    tProgressBar.style.transition = 'width 5000ms linear';
-    tProgressBar.style.width = '100%';
   });
 }
 
