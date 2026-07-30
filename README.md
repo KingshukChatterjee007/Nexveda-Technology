@@ -3,14 +3,6 @@
 A modern, high-performance, and visually stunning corporate website for **Nexveda Technologies**, crafted with cutting-edge web design aesthetics, smooth GSAP micro-animations, interactive hero particle & light beam canvas, dark/light theme toggle, and a complete contact form backend integration.
 
 ![Nexveda Technologies Banner](images/logo-dark.png)
-
----
-
-## 🌐 Live Website
-
-- **GitHub Pages URL**: [https://mrstark0257.github.io/MY-website/](https://mrstark0257.github.io/MY-website/)
-- **Repository**: [https://github.com/MrStark0257/MY-website](https://github.com/MrStark0257/MY-website)
-
 ---
 
 ## ✨ Features & Highlights
