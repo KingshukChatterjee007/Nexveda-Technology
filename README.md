@@ -84,27 +84,6 @@ Simply open `index.html` in any web browser, or use a live server extension (e.g
 
 ---
 
-## 📢 How to Publish Live on GitHub Pages
-
-Follow these step-by-step instructions to enable GitHub Pages on your repository:
-
-1. **Go to Repository Settings**:
-   Navigate to [https://github.com/MrStark0257/MY-website/settings/pages](https://github.com/MrStark0257/MY-website/settings/pages)
-
-2. **Select Build and Deployment Source**:
-   - Under **Build and deployment** -> **Source**, select **Deploy from a branch**.
-
-3. **Choose Branch & Folder**:
-   - **Branch**: `main`
-   - **Folder**: `/ (root)`
-   - Click **Save**.
-
-4. **Access Your Live Site**:
-   Within 1-2 minutes, GitHub will publish your site live at:
-   👉 **`https://mrstark0257.github.io/MY-website/`**
-
----
-
 ## 📬 Contact & Support
 
 - **Email**: [nexvedatechnologies@gmail.com](mailto:nexvedatechnologies@gmail.com)
