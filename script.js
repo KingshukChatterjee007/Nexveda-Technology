@@ -584,13 +584,20 @@ if (contactForm) {
         body: JSON.stringify({ name, email, phone, message })
       });
 
-      const result = await response.json();
-      formMessage.textContent = result.message || 'Something went wrong.';
-      if (result.success) {
-        contactForm.reset();
+      if (response.ok) {
+        const result = await response.json();
+        formMessage.textContent = result.message || 'Thanks! Your message has been sent successfully.';
+        if (result.success) {
+          contactForm.reset();
+        }
+      } else {
+        throw new Error('API unreachable or non-200 status');
       }
     } catch (error) {
-      formMessage.textContent = 'Unable to submit the form right now. Please try again later.';
+      // Direct mailto fallback for static site environments (e.g., GitHub Pages)
+      const mailtoUrl = `mailto:nexvedatechnologies@gmail.com?subject=${encodeURIComponent('Inquiry from ' + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone || 'N/A'}\n\nMessage:\n${message}`)}`;
+      window.location.href = mailtoUrl;
+      formMessage.textContent = 'Opening your mail application to send your inquiry directly...';
     }
   });
 }
