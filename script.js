@@ -2,7 +2,6 @@ const body = document.body;
 const header = document.querySelector('.site-header');
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
-const progressBar = document.getElementById('scrollProgress');
 const scrollTopBtn = document.getElementById('scrollTop');
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioCards = document.querySelectorAll('.portfolio-card');
@@ -198,9 +197,6 @@ if (heroCanvas) {
 /* Nav scroll state */
 window.addEventListener('scroll', () => {
   const scrollTop = window.scrollY;
-  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-  if (progressBar) progressBar.style.width = `${scrollPercent}%`;
   if (scrollTopBtn) scrollTopBtn.classList.toggle('show', scrollTop > 400);
   if (header) header.classList.toggle('scrolled', scrollTop > 12);
 });
