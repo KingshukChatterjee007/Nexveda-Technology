@@ -1,0 +1,12 @@
+{
+  "name": "Nexveda Technologies",
+  "short_name": "Nexveda",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#2563eb",
+  "description": "Premium websites and digital solutions by Nexveda Technologies.",
+  "icons": [
+    { "src": "images/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexveda Technologies | Modern Websites & Digital Solutions</title>
+    <meta
+      name="description"
+      content="Nexveda Technologies builds fast, scalable, and user-friendly websites and web applications for startups, businesses, and brands."
+    />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:url" content="https://nexveda.example.com/" />
+    <meta
+      name="keywords"
+      content="Nexveda Technologies, web development company, website development, web applications, UI UX design, e-commerce development, landing pages"
+    />
+    <meta name="author" content="Nexveda Technologies" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta property="og:title" content="Nexveda Technologies" />
+    <meta property="og:description" content="Building Modern Websites & Digital Solutions" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" />
+    <link rel="canonical" href="https://nexveda.example.com/" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="#home" class="brand" aria-label="Nexveda Technology Home">
+          <img src="images/logo-dark.png" alt="Nexveda Technology Logo" class="brand-logo-img dark-logo-img" />
+          <img src="images/logo-light.png" alt="Nexveda Technology Logo" class="brand-logo-img light-logo-img" />
+        </a>
+
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Work</a>
+          <a href="#team">Team</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="#contact" class="btn-nav-primary">Start a Project</a>
+
+          <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <!-- High performance dynamic glowing light beams canvas -->
+        <canvas id="heroCanvas" class="hero-canvas"></canvas>
+        <div class="hero-glow hero-glow-top-left"></div>
+        <div class="hero-glow hero-glow-bottom-right"></div>
+
+        <div class="container hero-container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-badge">
+                <span class="badge-icon">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </span>
+                <span class="badge-text">WEB DEVELOPMENT STUDIO</span>
+              </div>
+
+              <h1 class="hero-title">
+                <span class="hero-title-line">Building Modern</span>
+                <span class="hero-title-line">Websites &amp;</span>
+                <span class="hero-title-line hero-title-highlight">Digital Solutions</span>
+              </h1>
+
+              <p class="hero-description">
+                Nexveda Technologies helps startups, businesses, and brands create fast,
+                scalable, and user-friendly websites and web applications.
+              </p>
+
+              <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary-pill">
+                  <span>View Our Work</span>
+                  <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+                <a href="#contact" class="btn btn-secondary-pill">
+                  <span>Contact Us</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Floating Interactive Glass Cards -->
+            <div class="hero-visual-cards">
+              <div class="glass-card-float card-speed">
+                <div class="card-pulse-dot"></div>
+                <div class="card-info">
+                  <span class="card-title">99.8% Performance</span>
+                  <span class="card-sub">Blazing Fast &amp; Optimized</span>
+                </div>
+                <div class="card-badge-tag">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  100/100
+                </div>
+              </div>
+
+              <div class="glass-card-float card-launches">
+                <div class="card-stat">120+</div>
+                <div class="card-info">
+                  <span class="card-title">Digital Launches</span>
+                  <span class="card-sub">Websites &amp; Web Apps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-scroll">
+          <span class="scroll-text">SCROLL</span>
+          <div class="scroll-track">
+            <div class="scroll-dot"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">OUR PHILOSOPHY</span>
+            <h2>Crafting Digital Products That Stand Out</h2>
+            <p>We combine strategic design, modern engineering, and brand storytelling to build web experiences that convert.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="glass-card about-main-card reveal">
+              <div class="about-card-badge">NEXT-GEN DIGITAL STUDIO</div>
+              <h3>Engineering speed, credibility, and measurable growth for modern brands.</h3>
+              <p>
+                Nexveda Technologies is a full-service web development studio specializing in custom web applications, high-converting marketing sites, UI/UX systems, and scalable API platforms.
+              </p>
+              <p>
+                Our mission is to help ambitious startups and established companies outperform their competitors with fast, secure, and visually stunning digital products.
+              </p>
+
+              <div class="about-features-row">
+                <div class="about-feat-item">
+                  <span class="feat-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>100% Custom Code</strong>
+                    <span>Zero bloated templates or slow page speeds</span>
+                  </div>
+                </div>
+                <div class="about-feat-item">
+                  <span class="feat-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <circle cx="12" cy="12" r="6"></circle>
+                      <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                  </span>
+                  <div>
+                    <strong>Conversion Driven</strong>
+                    <span>Designed to turn visitors into loyal clients</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-card values-card reveal">
+              <h3>Core Principles</h3>
+              <ul class="value-list">
+                <li>
+                  <div class="val-num">01</div>
+                  <div>
+                    <strong>Quality-First Craftsmanship</strong>
+                    <span>Clean architecture, high accessibility, and rock-solid code.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="val-num">02</div>
+                  <div>
+                    <strong>Transparent Velocity</strong>
+                    <span>Weekly updates, direct communication, and on-time launches.</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="val-num">03</div>
+                  <div>
+                    <strong>Measurable Growth</strong>
+                    <span>Focusing on speed, SEO rankings, and conversion rates.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section founder-section" id="founder">
+        <div class="container founder-grid">
+          <div class="founder-visual glass-card reveal">
+            <div class="founder-avatar-frame">
+              <img src="images/meet-pavagadhi.jpg" alt="Meet Pavagadhi - Founder &amp; Lead Architect" class="founder-photo-img" />
+              <div class="founder-glow-ring"></div>
+            </div>
+            <div class="founder-badge-overlay">
+              <span class="badge-dot"></span>
+              <span>6+ Years Experience</span>
+            </div>
+          </div>
+
+          <div class="founder-content reveal">
+            <span class="eyebrow">MEET THE FOUNDER</span>
+            <h2>Engineering Vision &amp; Digital Precision</h2>
+            <p>
+              Hi, I’m <strong>Meet Pavagadhi</strong>, Founder &amp; Lead Architect at Nexveda Technologies. I build high-performance web applications with a focus on intuitive UI, clean scalable code, and seamless user experiences.
+            </p>
+            <p>
+              My expertise spans modern frontend frameworks, cloud APIs, and full-stack systems—helping brands scale their online presence effortlessly.
+            </p>
+
+            <div class="founder-skills-chips">
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>Node.js</span>
+              <span>TypeScript</span>
+              <span>Laravel</span>
+              <span>MongoDB</span>
+              <span>REST APIs</span>
+            </div>
+
+            <div class="founder-social-links">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-pill">LinkedIn ↗</a>
+              <a href="https://github.com" target="_blank" rel="noopener" class="social-pill">GitHub ↗</a>
+              <a href="#contact" class="social-pill active-pill">Work Together →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="team">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">OUR TEAM</span>
+            <h2>People Who Turn Vision Into Reality</h2>
+            <p>A multi-disciplinary team of engineers, designers, and strategists passionate about excellence.</p>
+          </div>
+
+          <div class="team-grid">
+            <!-- Meet Pavagadhi -->
+            <article class="team-card glass-card reveal">
+              <div class="team-img-wrap">
+                <img loading="lazy" src="images/meet-pavagadhi.jpg" alt="Meet Pavagadhi" />
+                <span class="team-role-tag">Founder &amp; Lead Architect</span>
+              </div>
+              <div class="team-info">
+                <h3>Meet Pavagadhi</h3>
+                <p>Leads product strategy, full-stack architecture, and technical execution.</p>
+                <div class="team-socials">
+                  <a href="#">LinkedIn</a> • <a href="#">GitHub</a> • <a href="#">X</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Sanchit Sharma -->
+            <article class="team-card glass-card reveal">
+              <div class="team-img-wrap">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=700&q=80" alt="Sanchit Sharma" />
+                <span class="team-role-tag">CS Engineer &amp; Graphic Designer</span>
+              </div>
+              <div class="team-info">
+                <h3>Sanchit Sharma</h3>
+                <p>Computer Science Engineer &amp; Graphic Designer specializing in visual branding, Photoshop &amp; marketing assets.</p>
+                <button class="team-bio-btn" id="sanchitBioBtn">
+                  <span>View Bio &amp; Portfolio</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </article>
+
+            <!-- Priya Shah -->
+            <article class="team-card glass-card reveal">
+              <div class="team-img-wrap">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80" alt="Priya Shah" />
+                <span class="team-role-tag">Frontend Specialist</span>
+              </div>
+              <div class="team-info">
+                <h3>Priya Shah</h3>
+                <p>Crafts fluid interfaces, micro-animations, and responsive layouts.</p>
+                <div class="team-socials">
+                  <a href="#">LinkedIn</a> • <a href="#">Dribbble</a> • <a href="#">GitHub</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Rohan Joshi -->
+            <article class="team-card glass-card reveal">
+              <div class="team-img-wrap">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Rohan Joshi" />
+                <span class="team-role-tag">Backend Engineer</span>
+              </div>
+              <div class="team-info">
+                <h3>Rohan Joshi</h3>
+                <p>Engineers robust database schemas, secure APIs, and cloud services.</p>
+                <div class="team-socials">
+                  <a href="#">LinkedIn</a> • <a href="#">GitHub</a> • <a href="#">Stack</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-heading left-align reveal">
+            <span class="eyebrow">WHAT WE DO</span>
+            <h2>Services engineered <br/><span class="hero-title-highlight">for growth.</span></h2>
+            <p>From first pixel to production, we cover the full spectrum of modern web delivery.</p>
+          </div>
+
+          <div class="services-grid">
+
+            <!-- Item 1: Website Development -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-globe">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </div>
+                <span class="service-num-badge">01</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> 100/100 SPEED</span>
+              <h3>Website Development</h3>
+              <p>Blazing-fast, standards-compliant sites engineered for scale, SEO, and zero lag.</p>
+            </article>
+
+            <!-- Item 2: Web Application Development -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-app">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </div>
+                <span class="service-num-badge">02</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> FULL-STACK SPA</span>
+              <h3>Web Application Development</h3>
+              <p>Robust SPAs, React dashboards, and client portals with clean architecture.</p>
+            </article>
+
+            <!-- Item 3: E-commerce Solutions -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-cart">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                  </svg>
+                </div>
+                <span class="service-num-badge">03</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> SECURE CHECKOUT</span>
+              <h3>E-commerce Solutions</h3>
+              <p>Conversion-focused storefronts with payment APIs and sub-second checkout.</p>
+            </article>
+
+            <!-- Item 4: UI/UX Design -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-design">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                    <path d="M2 2l7.586 7.586"></path>
+                    <circle cx="11" cy="11" r="2"></circle>
+                  </svg>
+                </div>
+                <span class="service-num-badge">04</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> DESIGN SYSTEM</span>
+              <h3>UI/UX Design</h3>
+              <p>Bespoke visual identity systems, glassmorphism UI, and 60fps micro-interactions.</p>
+            </article>
+
+            <!-- Item 5: Landing Pages -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-landing">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                    <polyline points="9 21 9 9"></polyline>
+                  </svg>
+                </div>
+                <span class="service-num-badge">05</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> HIGH CONVERSION</span>
+              <h3>Landing Pages</h3>
+              <p>High-impact, performance-engineered pages built to capture leads and convert.</p>
+            </article>
+
+            <!-- Item 6: WordPress Development -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-cms">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <span class="service-num-badge">06</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> HEADLESS CMS</span>
+              <h3>WordPress Development</h3>
+              <p>Custom theme engineering and headless CMS setups tailored for rapid editing.</p>
+            </article>
+
+            <!-- Item 7: Website Redesign -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-redesign">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path>
+                  </svg>
+                </div>
+                <span class="service-num-badge">07</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> MODERN REFRESH</span>
+              <h3>Website Redesign</h3>
+              <p>Transform legacy sites into modern, high-converting digital experiences.</p>
+            </article>
+
+            <!-- Item 8: API Integration -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-api">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="18" cy="5" r="3"></circle>
+                    <circle cx="6" cy="12" r="3"></circle>
+                    <circle cx="18" cy="19" r="3"></circle>
+                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                  </svg>
+                </div>
+                <span class="service-num-badge">08</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> REST &amp; GRAPHQL</span>
+              <h3>API Integration</h3>
+              <p>Connect payment gateways, CRMs, WebSockets, and cloud services smoothly.</p>
+            </article>
+
+            <!-- Item 9: Maintenance & Support -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-support">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <span class="service-num-badge">09</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> 24/7 MONITORING</span>
+              <h3>Maintenance &amp; Support</h3>
+              <p>Proactive security audits, SSL setup, cloud backups, and uptime monitoring.</p>
+            </article>
+
+            <!-- Item 10: Performance Optimization -->
+            <article class="service-card glass-card reveal">
+              <div class="service-card-beam"></div>
+              <div class="service-card-header">
+                <div class="service-icon icon-svc-speed">
+                  <svg class="svc-motion-svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                </div>
+                <span class="service-num-badge">10</span>
+              </div>
+              <span class="service-status-pill"><span class="status-dot"></span> SUB-SECOND LOAD</span>
+              <h3>Performance Optimization</h3>
+              <p>Rigorous Core Web Vitals tuning for 100/100 Lighthouse performance scores.</p>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+
+      <section class="section" id="portfolio">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">SELECTED PROJECTS</span>
+            <h2>Work That Delivers Real Results</h2>
+            <p>Explore recent web applications and platforms built for growing companies.</p>
+          </div>
+
+          <div class="filter-bar reveal">
+            <button class="filter-btn active" data-filter="all">All Projects</button>
+            <button class="filter-btn" data-filter="business">Business</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+            <button class="filter-btn" data-filter="dashboard">Dashboard</button>
+            <button class="filter-btn" data-filter="saas">SaaS</button>
+            <button class="filter-btn" data-filter="design">Branding &amp; Design</button>
+          </div>
+
+          <div class="portfolio-grid">
+            <article class="portfolio-card glass-card reveal" data-category="business">
+              <div class="portfolio-img-holder">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80" alt="GrowthHub Platform" />
+                <span class="port-category-badge">Business</span>
+              </div>
+              <div class="card-body">
+                <h3>GrowthHub Consulting</h3>
+                <p>Corporate platform with interactive quote builder and custom CMS backend.</p>
+                <div class="tech-stack-row">
+                  <span>React</span><span>Next.js</span><span>SEO 100</span>
+                </div>
+                <div class="port-footer">
+                  <span class="metric-highlight">+180% Conversions</span>
+                  <div class="card-actions">
+                    <a href="#contact" class="btn-link">View Case Study →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-card glass-card reveal" data-category="ecommerce">
+              <div class="portfolio-img-holder">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=900&q=80" alt="NovaCart Storefront" />
+                <span class="port-category-badge">E-Commerce</span>
+              </div>
+              <div class="card-body">
+                <h3>NovaCart Luxury Store</h3>
+                <p>Ultra-fast e-commerce experience with sub-second page loads and custom checkout.</p>
+                <div class="tech-stack-row">
+                  <span>Node</span><span>Laravel</span><span>Stripe</span>
+                </div>
+                <div class="port-footer">
+                  <span class="metric-highlight">0.4s Page Load</span>
+                  <div class="card-actions">
+                    <a href="#contact" class="btn-link">View Case Study →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-card glass-card reveal" data-category="dashboard">
+              <div class="portfolio-img-holder">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="InsightFlow Panel" />
+                <span class="port-category-badge">Dashboard</span>
+              </div>
+              <div class="card-body">
+                <h3>InsightFlow Analytics</h3>
+                <p>Real-time telemetry dashboard with customizable data visualizers.</p>
+                <div class="tech-stack-row">
+                  <span>React</span><span>TypeScript</span><span>MongoDB</span>
+                </div>
+                <div class="port-footer">
+                  <span class="metric-highlight">Realtime Telemetry</span>
+                  <div class="card-actions">
+                    <a href="#contact" class="btn-link">View Case Study →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-card glass-card reveal" data-category="saas">
+              <div class="portfolio-img-holder">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="CloudMint Platform" />
+                <span class="port-category-badge">SaaS</span>
+              </div>
+              <div class="card-body">
+                <h3>CloudMint SaaS Portal</h3>
+                <p>Subscription management portal with automated onboarding and billing API.</p>
+                <div class="tech-stack-row">
+                  <span>Next.js</span><span>Tailwind</span><span>Node.js</span>
+                </div>
+                <div class="port-footer">
+                  <span class="metric-highlight">10k Active Users</span>
+                  <div class="card-actions">
+                    <a href="#contact" class="btn-link">View Case Study →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-card glass-card reveal" data-category="design">
+              <div class="portfolio-img-holder">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=900&q=80" alt="Apex Vision Brand Identity" />
+                <span class="port-category-badge">Branding &amp; Design</span>
+              </div>
+              <div class="card-body">
+                <h3>Apex Vision Brand Identity</h3>
+                <p>Complete visual branding identity, vector logo design system, typography, and social brand kit.</p>
+                <div class="tech-stack-row">
+                  <span>Logo Design</span><span>Branding</span><span>Figma</span><span>Illustrator</span>
+                </div>
+                <div class="port-footer">
+                  <span class="metric-highlight">Full Identity System</span>
+                  <div class="card-actions">
+                    <a href="#contact" class="btn-link">View Case Study →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="portfolio-card glass-card reveal" data-category="saas">
+              <div class="portfolio-img-holder">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=900&q=80" alt="Veloce Fintech Portal" />
+                <span class="port-category-badge">SaaS</span>
+              </div>
+              <div class="card-body">
+                <h3>Veloce Fintech Portal</h3>
+                <p>High-frequency trading interface with real-time websocket charting and security encryption.</p>
+                <div class="tech-stack-row">
+                  <span>React</span><span>TypeScript</span><span>WebSockets</span>
+                </div>
+                <div class="port-footer">
+                  <span class="metric-highlight">99.99% Uptime</span>
+                  <div class="card-actions">
+                    <a href="#contact" class="btn-link">View Case Study →</a>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tech-marquee-section" id="technologies">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">OUR STACK</span>
+            <h2>Tools we <span class="text-gradient">master.</span></h2>
+            <p>A modern toolkit chosen for performance, reliability, and long-term maintainability.</p>
+          </div>
+        </div>
+
+        <div class="tech-marquee-wrapper">
+          <!-- Row 1: Giant Outlined Text Marquee (Scrolling Left) -->
+          <div class="marquee-track marquee-track-left">
+            <div class="marquee-content marquee-stroke">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>MongoDB</span>
+              <span>MySQL</span>
+              <span>WordPress</span>
+              <span>GSAP</span>
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+            <!-- Duplicated for seamless infinite loop -->
+            <div class="marquee-content marquee-stroke" aria-hidden="true">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>PHP</span>
+              <span>Laravel</span>
+              <span>MongoDB</span>
+              <span>MySQL</span>
+              <span>WordPress</span>
+              <span>GSAP</span>
+              <span>React.js</span>
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+          </div>
+
+          <!-- Row 2: Sleek Dark Glass Pill Badges Marquee (Scrolling Right) -->
+          <div class="marquee-track marquee-track-right">
+            <div class="marquee-content marquee-pills">
+              <span class="tech-pill-badge">NEXT.JS</span>
+              <span class="tech-pill-badge">NODE.JS</span>
+              <span class="tech-pill-badge">EXPRESS.JS</span>
+              <span class="tech-pill-badge">PHP</span>
+              <span class="tech-pill-badge">LARAVEL</span>
+              <span class="tech-pill-badge">MONGODB</span>
+              <span class="tech-pill-badge">MYSQL</span>
+              <span class="tech-pill-badge">WORDPRESS</span>
+              <span class="tech-pill-badge">GIT</span>
+              <span class="tech-pill-badge">GITHUB</span>
+              <span class="tech-pill-badge">FIGMA</span>
+              <span class="tech-pill-badge">HTML5</span>
+              <span class="tech-pill-badge">CSS3</span>
+              <span class="tech-pill-badge">GSAP</span>
+              <span class="tech-pill-badge">REST APIS</span>
+            </div>
+            <!-- Duplicated for seamless infinite loop -->
+            <div class="marquee-content marquee-pills" aria-hidden="true">
+              <span class="tech-pill-badge">NEXT.JS</span>
+              <span class="tech-pill-badge">NODE.JS</span>
+              <span class="tech-pill-badge">EXPRESS.JS</span>
+              <span class="tech-pill-badge">PHP</span>
+              <span class="tech-pill-badge">LARAVEL</span>
+              <span class="tech-pill-badge">MONGODB</span>
+              <span class="tech-pill-badge">MYSQL</span>
+              <span class="tech-pill-badge">WORDPRESS</span>
+              <span class="tech-pill-badge">GIT</span>
+              <span class="tech-pill-badge">GITHUB</span>
+              <span class="tech-pill-badge">FIGMA</span>
+              <span class="tech-pill-badge">HTML5</span>
+              <span class="tech-pill-badge">CSS3</span>
+              <span class="tech-pill-badge">GSAP</span>
+              <span class="tech-pill-badge">REST APIS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section process-section" id="process">
+        <!-- Background ambient glow for workflow -->
+        <div class="process-glow process-glow-left"></div>
+        <div class="process-glow process-glow-right"></div>
+
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">DEVELOPMENT WORKFLOW</span>
+            <h2>Our Streamlined <span class="text-gradient">6-Step Engineering Pipeline</span></h2>
+            <p>A proven, high-velocity engineering methodology ensuring predictable quality, clear timelines, and transparent delivery.</p>
+          </div>
+
+          <!-- IDE Code Window Top Bar -->
+          <div class="code-pipeline-window glass-card reveal">
+            <div class="code-window-bar">
+              <div class="window-controls">
+                <span class="ctrl-dot dot-red"></span>
+                <span class="ctrl-dot dot-yellow"></span>
+                <span class="ctrl-dot dot-green"></span>
+              </div>
+              <div class="code-tab-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                deploy-pipeline.config.ts
+              </div>
+              <div class="code-status-pill">
+                <span class="status-dot"></span> PIPELINE: ACTIVE (6 STAGES)
+              </div>
+            </div>
+            <div class="code-terminal-command">
+              <span class="prompt-symbol">$</span> <span class="cmd-text">npx @nexveda/engineering-pipeline execute --all-phases --mode=production</span>
+            </div>
+          </div>
+
+          <!-- Connected Laser Circuit Track (Desktop Pipeline Path) -->
+          <div class="workflow-line-track" aria-hidden="true">
+            <div class="workflow-laser-pulse"></div>
+          </div>
+
+          <div class="process-grid">
+
+            <!-- Step 1 -->
+            <article class="process-card flip-card reveal" data-step="1">
+              <div class="process-card-inner">
+                <!-- Front Side -->
+                <div class="process-card-front glass-card">
+                  <div class="process-top-row">
+                    <div class="motion-icon-wrapper icon-radar">
+                      <svg class="motion-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10" class="svg-circle-bg"></circle>
+                        <circle cx="12" cy="12" r="6" class="svg-pulse-ring"></circle>
+                        <circle cx="12" cy="12" r="2" class="svg-center-dot"></circle>
+                      </svg>
+                    </div>
+                    <span class="process-step-badge">{ 01 }</span>
+                  </div>
+                  <span class="code-comment-tag">// Phase 01: Requirement Analysis</span>
+                  <span class="process-phase-tag">&lt;DiscoveryStrategy /&gt;</span>
+                  <h3>Discovery &amp; Strategy</h3>
+                  <p>We analyze your business goals, user personas, tech requirements, and market competitors to build a rock-solid roadmap.</p>
+                  <div class="process-status-bar">
+                    <span class="status-dot"></span> Hover to Inspect Code &amp; Deliverables 🔄
+                  </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="process-card-back glass-card">
+                  <div class="back-header">
+                    <span class="back-badge">STAGE_01.output</span>
+                    <span class="back-step-num">{ 01 }</span>
+                  </div>
+                  <span class="code-comment">// Key Output Deliverables:</span>
+                  <ul class="deliverables-list">
+                    <li><span class="check-icon">✓</span> Market &amp; Competitor Audit</li>
+                    <li><span class="check-icon">✓</span> Persona &amp; Journey Mapping</li>
+                    <li><span class="check-icon">✓</span> Architecture Specifications</li>
+                    <li><span class="check-icon">✓</span> Project Scope &amp; Milestones</li>
+                  </ul>
+                  <div class="back-tech-chips">
+                    <span>Miro</span><span>Figma</span><span>Notion</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 2 -->
+            <article class="process-card flip-card reveal" data-step="2">
+              <div class="process-card-inner">
+                <!-- Front Side -->
+                <div class="process-card-front glass-card">
+                  <div class="process-top-row">
+                    <div class="motion-icon-wrapper icon-wireframe">
+                      <svg class="motion-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="3"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                      </svg>
+                    </div>
+                    <span class="process-step-badge">{ 02 }</span>
+                  </div>
+                  <span class="code-comment-tag">// Phase 02: Wireframes &amp; Prototypes</span>
+                  <span class="process-phase-tag">&lt;ArchitectureUX /&gt;</span>
+                  <h3>Architecture &amp; UX</h3>
+                  <p>Designing wireframes, intuitive sitemaps, and high-fidelity interactive prototypes focused on user conversion.</p>
+                  <div class="process-status-bar">
+                    <span class="status-dot"></span> Hover to Inspect Code &amp; Deliverables 🔄
+                  </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="process-card-back glass-card">
+                  <div class="back-header">
+                    <span class="back-badge">STAGE_02.output</span>
+                    <span class="back-step-num">{ 02 }</span>
+                  </div>
+                  <span class="code-comment">// Key Output Deliverables:</span>
+                  <ul class="deliverables-list">
+                    <li><span class="check-icon">✓</span> Information Architecture</li>
+                    <li><span class="check-icon">✓</span> Low &amp; Hi-Fi Wireframes</li>
+                    <li><span class="check-icon">✓</span> Clickable Interactive Prototype</li>
+                    <li><span class="check-icon">✓</span> UX Conversion Mapping</li>
+                  </ul>
+                  <div class="back-tech-chips">
+                    <span>Figma</span><span>Balsamiq</span><span>Whimsical</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 3 -->
+            <article class="process-card flip-card reveal" data-step="3">
+              <div class="process-card-inner">
+                <!-- Front Side -->
+                <div class="process-card-front glass-card">
+                  <div class="process-top-row">
+                    <div class="motion-icon-wrapper icon-design">
+                      <svg class="motion-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                        <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                        <circle cx="11" cy="11" r="2.5"></circle>
+                      </svg>
+                    </div>
+                    <span class="process-step-badge">{ 03 }</span>
+                  </div>
+                  <span class="code-comment-tag">// Phase 03: Design &amp; Animations</span>
+                  <span class="process-phase-tag">&lt;UIDesignMotion /&gt;</span>
+                  <h3>UI Design &amp; Motion</h3>
+                  <p>Crafting bespoke visual identity systems, glassmorphic UI design, micro-interactions, and 60fps animations.</p>
+                  <div class="process-status-bar">
+                    <span class="status-dot"></span> Hover to Inspect Code &amp; Deliverables 🔄
+                  </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="process-card-back glass-card">
+                  <div class="back-header">
+                    <span class="back-badge">STAGE_03.output</span>
+                    <span class="back-step-num">{ 03 }</span>
+                  </div>
+                  <span class="code-comment">// Key Output Deliverables:</span>
+                  <ul class="deliverables-list">
+                    <li><span class="check-icon">✓</span> Custom Design System Tokens</li>
+                    <li><span class="check-icon">✓</span> Light &amp; Dark Theme Assets</li>
+                    <li><span class="check-icon">✓</span> Custom Micro-Animations</li>
+                    <li><span class="check-icon">✓</span> 60fps Motion Design Specs</li>
+                  </ul>
+                  <div class="back-tech-chips">
+                    <span>Figma</span><span>GSAP</span><span>CSS3</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 4 -->
+            <article class="process-card flip-card reveal" data-step="4">
+              <div class="process-card-inner">
+                <!-- Front Side -->
+                <div class="process-card-front glass-card">
+                  <div class="process-top-row">
+                    <div class="motion-icon-wrapper icon-code">
+                      <svg class="motion-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="16 18 22 12 16 6"></polyline>
+                        <polyline points="8 6 2 12 8 18"></polyline>
+                        <line x1="14" y1="4" x2="10" y2="20"></line>
+                      </svg>
+                    </div>
+                    <span class="process-step-badge">{ 04 }</span>
+                  </div>
+                  <span class="code-comment-tag">// Phase 04: Modular Full-Stack Code</span>
+                  <span class="process-phase-tag">&lt;CustomEngineering /&gt;</span>
+                  <h3>Custom Engineering</h3>
+                  <p>Writing modular, scalable production code with React, Node.js, optimized database schemas, and REST APIs.</p>
+                  <div class="process-status-bar">
+                    <span class="status-dot"></span> Hover to Inspect Code &amp; Deliverables 🔄
+                  </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="process-card-back glass-card">
+                  <div class="back-header">
+                    <span class="back-badge">STAGE_04.output</span>
+                    <span class="back-step-num">{ 04 }</span>
+                  </div>
+                  <span class="code-comment">// Key Output Deliverables:</span>
+                  <ul class="deliverables-list">
+                    <li><span class="check-icon">✓</span> Modular React / Next.js App</li>
+                    <li><span class="check-icon">✓</span> REST &amp; GraphQL Integration</li>
+                    <li><span class="check-icon">✓</span> High-Performance DB Schema</li>
+                    <li><span class="check-icon">✓</span> Clean Documented Git Codebase</li>
+                  </ul>
+                  <div class="back-tech-chips">
+                    <span>React</span><span>Node.js</span><span>SQLite</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 5 -->
+            <article class="process-card flip-card reveal" data-step="5">
+              <div class="process-card-inner">
+                <!-- Front Side -->
+                <div class="process-card-front glass-card">
+                  <div class="process-top-row">
+                    <div class="motion-icon-wrapper icon-testing">
+                      <svg class="motion-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        <polyline points="9 12 11 14 15 10"></polyline>
+                      </svg>
+                    </div>
+                    <span class="process-step-badge">{ 05 }</span>
+                  </div>
+                  <span class="code-comment-tag">// Phase 05: Lighthouse 100/100 Audit</span>
+                  <span class="process-phase-tag">&lt;QAPerformance /&gt;</span>
+                  <h3>Testing &amp; Optimization</h3>
+                  <p>Rigorous cross-browser QA, mobile responsiveness, end-to-end security audits, and 100/100 Core Web Vitals tuning.</p>
+                  <div class="process-status-bar">
+                    <span class="status-dot"></span> Hover to Inspect Code &amp; Deliverables 🔄
+                  </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="process-card-back glass-card">
+                  <div class="back-header">
+                    <span class="back-badge">STAGE_05.output</span>
+                    <span class="back-step-num">{ 05 }</span>
+                  </div>
+                  <span class="code-comment">// Key Output Deliverables:</span>
+                  <ul class="deliverables-list">
+                    <li><span class="check-icon">✓</span> 99.8%+ Lighthouse Performance</li>
+                    <li><span class="check-icon">✓</span> Cross-Browser &amp; Device Test</li>
+                    <li><span class="check-icon">✓</span> Security &amp; Vulnerability Fixes</li>
+                    <li><span class="check-icon">✓</span> Technical SEO Meta &amp; Schema</li>
+                  </ul>
+                  <div class="back-tech-chips">
+                    <span>Lighthouse</span><span>Jest</span><span>Cypress</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Step 6 -->
+            <article class="process-card flip-card reveal" data-step="6">
+              <div class="process-card-inner">
+                <!-- Front Side -->
+                <div class="process-card-front glass-card">
+                  <div class="process-top-row">
+                    <div class="motion-icon-wrapper icon-launch">
+                      <svg class="motion-svg" width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                      </svg>
+                    </div>
+                    <span class="process-step-badge">{ 06 }</span>
+                  </div>
+                  <span class="code-comment-tag">// Phase 06: Zero-Downtime Deployment</span>
+                  <span class="process-phase-tag">&lt;DeploymentScale /&gt;</span>
+                  <h3>Deployment &amp; Scale</h3>
+                  <p>Zero-downtime server launch, SSL security setup, CDN configuration, and 24/7 continuous monitoring &amp; maintenance.</p>
+                  <div class="process-status-bar">
+                    <span class="status-dot"></span> Hover to Inspect Code &amp; Deliverables 🔄
+                  </div>
+                </div>
+
+                <!-- Back Side -->
+                <div class="process-card-back glass-card">
+                  <div class="back-header">
+                    <span class="back-badge">STAGE_06.output</span>
+                    <span class="back-step-num">{ 06 }</span>
+                  </div>
+                  <span class="code-comment">// Key Output Deliverables:</span>
+                  <ul class="deliverables-list">
+                    <li><span class="check-icon">✓</span> Zero-Downtime Live Launch</li>
+                    <li><span class="check-icon">✓</span> Global CDN &amp; SSL Encryption</li>
+                    <li><span class="check-icon">✓</span> Real-Time Error Logging</li>
+                    <li><span class="check-icon">✓</span> 24/7 SLA Ongoing Maintenance</li>
+                  </ul>
+                  <div class="back-tech-chips">
+                    <span>AWS</span><span>Vercel</span><span>Docker</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- IDE Terminal Bottom Footer Ticker -->
+          <div class="code-pipeline-footer glass-card reveal">
+            <span class="footer-prompt">$</span>
+            <span class="footer-command">git commit -m "build: 6-phase engineering pipeline deployed successfully"</span>
+            <span class="footer-badge">✔ BUILD_SUCCESS</span>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="section testimonials-section" id="testimonials">
+        <div class="process-glow process-glow-right"></div>
+        <div class="container">
+          <div class="section-heading reveal">
+            <h2>Client Reviews &amp; <span class="text-gradient">Success Stories</span></h2>
+            <p>Real impact delivered for founders, high-growth startups, and digital enterprises worldwide.</p>
+          </div>
+
+          <div class="testimonial-showcase glass-card reveal">
+
+            <div class="testimonial-track-wrapper">
+              <div class="testimonial-track">
+
+                <!-- Client 1 -->
+                <article class="testimonial-card active" data-index="0">
+                  <div class="t-card-header">
+                    <div class="t-avatar-group">
+                      <div class="t-avatar-ring">
+                        <span class="t-avatar-text">BG</span>
+                      </div>
+                      <div class="t-client-details">
+                        <h3>Ritika Sharma</h3>
+                        <span class="t-role">Founder &amp; CEO • BrandX Global</span>
+                      </div>
+                    </div>
+                    <span class="t-verified-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Verified Review
+                    </span>
+                  </div>
+
+                  <div class="t-rating-row">
+                    <div class="star-rating">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <span class="rating-score">5.0 Star Rating</span>
+                  </div>
+
+                  <p class="t-body">“Nexveda completely elevated our digital presence. The new web application is blistering fast, looks world-class, and instantly increased our inbound lead conversion rate by 140%.”</p>
+                </article>
+
+                <!-- Client 2 -->
+                <article class="testimonial-card" data-index="1">
+                  <div class="t-card-header">
+                    <div class="t-avatar-group">
+                      <div class="t-avatar-ring">
+                        <span class="t-avatar-text">UP</span>
+                      </div>
+                      <div class="t-client-details">
+                        <h3>Arjun Verma</h3>
+                        <span class="t-role">Co-Founder &amp; CTO • UrbanPeak Tech</span>
+                      </div>
+                    </div>
+                    <span class="t-verified-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Verified Review
+                    </span>
+                  </div>
+
+                  <div class="t-rating-row">
+                    <div class="star-rating">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <span class="rating-score">5.0 Star Rating</span>
+                  </div>
+
+                  <p class="t-body">“Working with Meet and the Nexveda team was the best engineering decision for our SaaS launch. Flawless React codebase, clear communication, and delivery 2 weeks ahead of schedule.”</p>
+                </article>
+
+                <!-- Client 3 -->
+                <article class="testimonial-card" data-index="2">
+                  <div class="t-card-header">
+                    <div class="t-avatar-group">
+                      <div class="t-avatar-ring">
+                        <span class="t-avatar-text">CM</span>
+                      </div>
+                      <div class="t-client-details">
+                        <h3>Meera Patel</h3>
+                        <span class="t-role">Product Director • CloudMint</span>
+                      </div>
+                    </div>
+                    <span class="t-verified-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Verified Review
+                    </span>
+                  </div>
+
+                  <div class="t-rating-row">
+                    <div class="star-rating">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <span class="rating-score">5.0 Star Rating</span>
+                  </div>
+
+                  <p class="t-body">“Their attention to UI detail, glassmorphic micro-interactions, and 100/100 Core Web Vitals optimization is top-tier. Our e-commerce store now loads in under 400ms worldwide.”</p>
+                </article>
+
+                <!-- Client 4 -->
+                <article class="testimonial-card" data-index="3">
+                  <div class="t-card-header">
+                    <div class="t-avatar-group">
+                      <div class="t-avatar-ring">
+                        <span class="t-avatar-text">AV</span>
+                      </div>
+                      <div class="t-client-details">
+                        <h3>David Harrison</h3>
+                        <span class="t-role">Managing Partner • Apex Venture Group</span>
+                      </div>
+                    </div>
+                    <span class="t-verified-badge">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                      Verified Review
+                    </span>
+                  </div>
+
+                  <div class="t-rating-row">
+                    <div class="star-rating">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="#38bdf8" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <span class="rating-score">5.0 Star Rating</span>
+                  </div>
+
+                  <p class="t-body">“The custom branding and full-stack web application Nexveda built for Apex transformed our online presence. Outstanding technical skill, responsiveness, and executive design.”</p>
+                </article>
+
+              </div>
+            </div>
+
+            <!-- Interactive Navigation Bar -->
+            <div class="t-navigation-bar">
+              <button class="slider-btn" id="prevTestimonial" aria-label="Previous Review">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              </button>
+
+              <div class="t-dot-indicators" id="testimonialDots">
+                <button class="t-dot active" data-index="0" aria-label="Slide 1"></button>
+                <button class="t-dot" data-index="1" aria-label="Slide 2"></button>
+                <button class="t-dot" data-index="2" aria-label="Slide 3"></button>
+                <button class="t-dot" data-index="3" aria-label="Slide 4"></button>
+              </div>
+
+              <button class="slider-btn" id="nextTestimonial" aria-label="Next Review">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </button>
+            </div>
+
+            <!-- Auto-play Timer Progress Bar -->
+            <div class="t-progress-bar-track">
+              <div class="t-progress-bar-fill" id="tProgressBar"></div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="section stats-section" id="stats">
+        <div class="container stats-grid">
+          <div class="stat-card glass-card reveal">
+            <strong data-count="120">0</strong>
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card glass-card reveal">
+            <strong data-count="80">0</strong>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat-card glass-card reveal">
+            <strong data-count="6">0</strong>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-card glass-card reveal">
+            <strong data-count="100">0</strong>
+            <span class="stat-label">Speed Score</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+            <p>Have questions about timelines, stacks, or pricing? Find clear answers below.</p>
+          </div>
+
+          <div class="faq-accordion reveal">
+            <details class="faq-item" open>
+              <summary>What types of web development projects do you handle?</summary>
+              <div class="faq-content">
+                <p>We build everything from custom high-converting marketing websites, portfolios, and e-commerce stores to complex SaaS web applications, client portals, and REST API backends.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>What tech stack do you recommend for new web applications?</summary>
+              <div class="faq-content">
+                <p>We specialize in modern JavaScript frameworks (React, Next.js, Node.js) paired with fast databases (MongoDB, SQLite, PostgreSQL). For custom dynamic sites, we also utilize PHP / Laravel and WordPress depending on your team's needs.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>How long does a standard web project take from kick-off to launch?</summary>
+              <div class="faq-content">
+                <p>High-converting business websites typically launch in 2 to 4 weeks. Custom web applications and complex e-commerce stores take 4 to 8 weeks depending on features and scope.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Do you provide post-launch maintenance and technical support?</summary>
+              <div class="faq-content">
+                <p>Yes! We offer monthly maintenance packages covering core web vitals speed tuning, security audits, software updates, content changes, and 24/7 uptime monitoring.</p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>Can you redesign our existing website without losing SEO rankings?</summary>
+              <div class="faq-content">
+                <p>Absolutely. We conduct full SEO url mapping, preserve 301 redirects, improve schema markup, and boost core web vitals so your organic traffic increases post-launch.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="container contact-grid">
+          <div class="contact-info-col">
+            <div class="section-heading left-align">
+              <span class="eyebrow">START A PROJECT</span>
+              <h2>Let's Build Something Great Together</h2>
+              <p>Ready to level up your digital presence? Send us your project details and we will respond within 24 hours.</p>
+            </div>
+
+            <div class="contact-details glass-card">
+              <div class="contact-detail-item">
+                <span class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                    <polyline points="2,4 12,13 22,4"></polyline>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Email Us</strong>
+                  <a href="mailto:nexvedatechnologies@gmail.com">nexvedatechnologies@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <span class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.54a16 16 0 0 0 6.29 6.29l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Call / WhatsApp</strong>
+                  <a href="tel:+919824999054">+91-9824999054</a>
+                </div>
+              </div>
+
+              <div class="contact-detail-item">
+                <span class="contact-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  </svg>
+                </span>
+                <div>
+                  <strong>Location</strong>
+                  <span>Remote Studio • Serving Global Clients</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form glass-card" id="contactForm" novalidate>
+            <h3>Send a Message</h3>
+            <div class="form-group">
+              <label for="nameInput">Full Name *</label>
+              <input type="text" id="nameInput" name="name" required placeholder="e.g. Alex Johnson" />
+            </div>
+
+            <div class="form-group">
+              <label for="emailInput">Email Address *</label>
+              <input type="email" id="emailInput" name="email" required placeholder="alex@company.com" />
+            </div>
+
+            <div class="form-group">
+              <label for="phoneInput">Phone Number</label>
+              <input type="tel" id="phoneInput" name="phone" placeholder="+1 (555) 000-0000" />
+            </div>
+
+            <div class="form-group">
+              <label for="messageInput">Project Details *</label>
+              <textarea id="messageInput" name="message" required rows="4" placeholder="Tell us about your project goals, scope, and timeline..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary-pill btn-full">
+              <span>Send Message</span>
+              <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+
+            <p class="form-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#home" class="brand footer-brand" aria-label="Nexveda Technology Home">
+            <img src="images/logo-dark.png" alt="Nexveda Technology Logo" class="brand-logo-img dark-logo-img footer-logo-img" />
+            <img src="images/logo-light.png" alt="Nexveda Technology Logo" class="brand-logo-img light-logo-img footer-logo-img" />
+          </a>
+          <p>Premium websites, digital products, and scalable web experiences.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <h3>Services</h3>
+          <a href="#services">Website Development</a>
+          <a href="#services">UI/UX &amp; Graphic Design</a>
+          <a href="#services">API Integration</a>
+          <a href="#services">Support &amp; Audits</a>
+        </div>
+        <div>
+          <h3>Social</h3>
+          <a href="mailto:nexvedatechnologies@gmail.com">Email Us</a>
+          <a href="tel:+919824999054">Call / WhatsApp</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2026 Nexveda Technologies. All rights reserved.</span>
+        <span>Privacy Policy • Terms & Conditions</span>
+      </div>
+    </footer>
+
+    <!-- Team Member Bio Pop-up Modal -->
+    <div class="team-modal" id="teamModal" aria-hidden="true">
+      <div class="team-modal-overlay" id="teamModalOverlay"></div>
+      <div class="team-modal-container glass-card">
+        <button class="team-modal-close" id="teamModalClose" aria-label="Close modal">✕</button>
+        <div class="team-modal-content" id="teamModalContent">
+          <!-- Populated dynamically via JS -->
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
