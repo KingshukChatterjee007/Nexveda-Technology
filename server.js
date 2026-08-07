@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const sqlite3 = require('sqlite3').verbose();
+const nodemailer = require('nodemailer');
 const { Resend } = require('resend');
 const dotenv = require('dotenv');
 
@@ -12,6 +13,20 @@ const port = process.env.PORT || 3000;
 const dbPath = process.env.DB_PATH || './data/nexveda.db';
 const contactEmail = process.env.CONTACT_EMAIL || 'nexvedatechnologies@gmail.com';
 const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KEY) : null;
+
+// Configure SMTP Transporter (for Gmail or custom SMTP)
+let smtpTransporter = null;
+if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS && process.env.SMTP_PASS !== 'your_gmail_app_password_here') {
+  smtpTransporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || '587', 10),
+    secure: process.env.SMTP_SECURE === 'true',
+    auth: {
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
+    },
+  });
+}
 
 const dbDir = path.dirname(dbPath);
 if (!fs.existsSync(dbDir)) {
@@ -62,7 +77,27 @@ app.post('/api/contact', async (req, res) => {
       return res.status(500).json({ success: false, message: 'Failed to save your message.' });
     }
 
-    if (resend) {
+    // Email notification sending via SMTP or Resend
+    if (smtpTransporter) {
+      try {
+        await smtpTransporter.sendMail({
+          from: `"Nexveda Website" <${process.env.SMTP_USER || contactEmail}>`,
+          to: contactEmail,
+          replyTo: email,
+          subject: `New Website Inquiry from ${name}`,
+          html: `
+            <h2>New contact form submission</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone || 'N/A'}</p>
+            <p><strong>Message:</strong> ${message}</p>
+          `,
+        });
+        console.log(`Email successfully sent via SMTP to ${contactEmail}`);
+      } catch (mailErr) {
+        console.error('SMTP email error:', mailErr);
+      }
+    } else if (resend) {
       try {
         await resend.emails.send({
           from: 'Nexveda Contact <onboarding@resend.dev>',
@@ -77,6 +112,7 @@ app.post('/api/contact', async (req, res) => {
             <p><strong>Message:</strong> ${message}</p>
           `,
         });
+        console.log(`Email successfully sent via Resend to ${contactEmail}`);
       } catch (mailErr) {
         console.error('Resend email error:', mailErr);
       }

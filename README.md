@@ -65,13 +65,18 @@ Simply open `index.html` in any web browser, or use a live server extension (e.g
    npm install
    ```
 
-3. **Configure Environment Variables (Optional)**:
    Create a `.env` file in the root directory:
    ```env
    PORT=3000
    DB_PATH=./data/nexveda.db
    CONTACT_EMAIL=nexvedatechnologies@gmail.com
-   RESEND_API_KEY=your_resend_api_key_here
+
+   # SMTP Configuration (Gmail)
+   SMTP_HOST=smtp.gmail.com
+   SMTP_PORT=587
+   SMTP_SECURE=false
+   SMTP_USER=nexvedatechnologies@gmail.com
+   SMTP_PASS=your_gmail_app_password
    ```
 
 4. **Start the Express Server**:
