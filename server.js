@@ -26,18 +26,15 @@ if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS && p
       pass: process.env.SMTP_PASS,
     },
   });
-<<<<<<< Updated upstream
   console.log(`✉️ Email Service: Configured via SMTP (${process.env.SMTP_USER})`);
 } else if (resend) {
   console.log(`✉️ Email Service: Configured via Resend API`);
 } else {
   console.warn(`⚠️ Email Service: Disabled (SMTP_PASS is set to placeholder or missing in .env)`);
-=======
->>>>>>> Stashed changes
 }
 
 // Database Setup (Supports PostgreSQL & SQLite)
-let dbType = 'sqlite';
+let dbType = process.env.DB_TYPE || 'sqlite';
 let pgPool = null;
 let sqliteDb = null;
 
@@ -48,7 +45,39 @@ const pgDbName = process.env.DB_NAME || process.env.PG_DATABASE || 'nexveda';
 const pgPort = parseInt(process.env.DB_PORT || process.env.PG_PORT || '5432', 10);
 const connectionString = process.env.DATABASE_URL;
 
-if (connectionString || pgHost) {
+function initSqlite() {
+  dbType = 'sqlite';
+  const dbPath = process.env.DB_PATH || './data/nexveda.db';
+  const dbDir = path.dirname(dbPath);
+  if (!fs.existsSync(dbDir)) {
+    fs.mkdirSync(dbDir, { recursive: true });
+  }
+
+  sqliteDb = new sqlite3.Database(dbPath, (err) => {
+    if (err) {
+      console.error('SQLite connection error:', err.message);
+      process.exit(1);
+    }
+
+    sqliteDb.run(`CREATE TABLE IF NOT EXISTS submissions (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      email TEXT NOT NULL,
+      phone TEXT,
+      message TEXT NOT NULL,
+      created_at TEXT DEFAULT CURRENT_TIMESTAMP
+    )`, (createErr) => {
+      if (createErr) {
+        console.error('Failed to create SQLite table:', createErr.message);
+        process.exit(1);
+      } else {
+        console.log(`Connected to SQLite Database at ${dbPath}`);
+      }
+    });
+  });
+}
+
+if ((connectionString || pgHost) && process.env.DB_TYPE !== 'sqlite') {
   dbType = 'postgres';
 
   async function initPostgres() {
@@ -102,39 +131,14 @@ if (connectionString || pgHost) {
       console.log(`Connected to PostgreSQL Database "${pgDbName}" (Table: submissions ready)`);
     } catch (err) {
       console.error('PostgreSQL setup/connection error:', err.message);
+      console.log('Falling back to SQLite database...');
+      initSqlite();
     }
   }
 
   initPostgres();
 } else {
-  const dbPath = process.env.DB_PATH || './data/nexveda.db';
-  const dbDir = path.dirname(dbPath);
-  if (!fs.existsSync(dbDir)) {
-    fs.mkdirSync(dbDir, { recursive: true });
-  }
-
-  sqliteDb = new sqlite3.Database(dbPath, (err) => {
-    if (err) {
-      console.error('SQLite connection error:', err.message);
-      process.exit(1);
-    }
-
-    sqliteDb.run(`CREATE TABLE IF NOT EXISTS submissions (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      name TEXT NOT NULL,
-      email TEXT NOT NULL,
-      phone TEXT,
-      message TEXT NOT NULL,
-      created_at TEXT DEFAULT CURRENT_TIMESTAMP
-    )`, (createErr) => {
-      if (createErr) {
-        console.error('Failed to create SQLite table:', createErr.message);
-        process.exit(1);
-      } else {
-        console.log(`Connected to SQLite Database at ${dbPath}`);
-      }
-    });
-  });
+  initSqlite();
 }
 
 // Helper function to save submission
