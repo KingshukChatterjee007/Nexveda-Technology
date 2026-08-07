@@ -26,6 +26,11 @@ if (process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS && p
       pass: process.env.SMTP_PASS,
     },
   });
+  console.log(`✉️ Email Service: Configured via SMTP (${process.env.SMTP_USER})`);
+} else if (resend) {
+  console.log(`✉️ Email Service: Configured via Resend API`);
+} else {
+  console.warn(`⚠️ Email Service: Disabled (SMTP_PASS is set to placeholder or missing in .env)`);
 }
 
 // Database Setup (Supports PostgreSQL & SQLite)
