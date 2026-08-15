@@ -30,10 +30,16 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.css" />
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing"></div>
     <div class="scroll-progress" id="scrollProgress"></div>
+    <canvas id="bg3dCanvas" class="bg-3d-canvas"></canvas>
 
     <header class="site-header">
       <nav class="navbar container">
@@ -48,6 +54,7 @@
           <a href="#portfolio">Work</a>
           <a href="#team">Team</a>
           <a href="#process">Process</a>
+          <a href="#estimator">Estimator</a>
           <a href="#contact">Contact</a>
         </div>
 
@@ -63,10 +70,10 @@
 
     <main>
       <section class="hero" id="home">
-        <!-- High performance dynamic glowing light beams canvas -->
-        <canvas id="heroCanvas" class="hero-canvas"></canvas>
-        <div class="hero-glow hero-glow-top-left"></div>
-        <div class="hero-glow hero-glow-bottom-right"></div>
+        <!-- Glowing Perspective Grid & Dual-Tone Ambient Glows -->
+        <div class="perspective-grid"></div>
+        <div class="glow-cyan-ambient"></div>
+        <div class="glow-magenta-ambient"></div>
 
         <div class="container hero-container">
           <div class="hero-grid">
@@ -105,29 +112,6 @@
               </div>
             </div>
 
-            <!-- Floating Interactive Glass Cards -->
-            <div class="hero-visual-cards">
-              <div class="glass-card-float card-speed">
-                <div class="card-pulse-dot"></div>
-                <div class="card-info">
-                  <span class="card-title">99.8% Performance</span>
-                  <span class="card-sub">Blazing Fast &amp; Optimized</span>
-                </div>
-                <div class="card-badge-tag">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                  </svg>
-                  100/100
-                </div>
-              </div>
-
-              <div class="glass-card-float card-launches">
-                <div class="card-stat">120+</div>
-                <div class="card-info">
-                  <span class="card-title">Digital Launches</span>
-                  <span class="card-sub">Websites &amp; Web Apps</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -325,18 +309,22 @@
               </div>
             </article>
 
-            <!-- Rohan Joshi -->
+            <!-- Ayush Ranjan -->
             <article class="team-card glass-card reveal">
               <div class="team-img-wrap">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=80" alt="Rohan Joshi" />
-                <span class="team-role-tag">Backend Engineer</span>
+                <img loading="lazy" src="assets/images/ayush-ranjan.jpg" alt="Ayush Ranjan" />
+                <span class="team-role-tag">Software Engineer &amp; Full Stack Developer</span>
               </div>
               <div class="team-info">
-                <h3>Rohan Joshi</h3>
-                <p>Engineers robust database schemas, secure APIs, and cloud services.</p>
-                <div class="team-socials">
-                  <a href="#">LinkedIn</a> • <a href="#">GitHub</a> • <a href="#">Stack</a>
-                </div>
+                <h3>Ayush Ranjan</h3>
+                <p>Software Engineer specializing in full-stack web platforms, database schema optimization, systems programming &amp; AI models.</p>
+                <button class="team-bio-btn" id="ayushBioBtn">
+                  <span>View Bio &amp; Portfolio</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </button>
               </div>
             </article>
           </div>
@@ -774,29 +762,7 @@
             <p>A proven, high-velocity engineering methodology ensuring predictable quality, clear timelines, and transparent delivery.</p>
           </div>
 
-          <!-- IDE Code Window Top Bar -->
-          <div class="code-pipeline-window glass-card reveal">
-            <div class="code-window-bar">
-              <div class="window-controls">
-                <span class="ctrl-dot dot-red"></span>
-                <span class="ctrl-dot dot-yellow"></span>
-                <span class="ctrl-dot dot-green"></span>
-              </div>
-              <div class="code-tab-title">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
-                deploy-pipeline.config.ts
-              </div>
-              <div class="code-status-pill">
-                <span class="status-dot"></span> PIPELINE: ACTIVE (6 STAGES)
-              </div>
-            </div>
-            <div class="code-terminal-command">
-              <span class="prompt-symbol">$</span> <span class="cmd-text">npx @nexveda/engineering-pipeline execute --all-phases --mode=production</span>
-            </div>
-          </div>
+
 
           <!-- Connected Laser Circuit Track (Desktop Pipeline Path) -->
           <div class="workflow-line-track" aria-hidden="true">
@@ -1068,12 +1034,7 @@
 
           </div>
 
-          <!-- IDE Terminal Bottom Footer Ticker -->
-          <div class="code-pipeline-footer glass-card reveal">
-            <span class="footer-prompt">$</span>
-            <span class="footer-command">git commit -m "build: 6-phase engineering pipeline deployed successfully"</span>
-            <span class="footer-badge">✔ BUILD_SUCCESS</span>
-          </div>
+
 
         </div>
       </section>
@@ -1265,6 +1226,109 @@
         </div>
       </section>
 
+      <section class="section estimator-section" id="estimator">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">INTERACTIVE ESTIMATOR</span>
+            <h2>Calculate Your <span class="text-gradient">Project Cost &amp; Timeline</span></h2>
+            <p>Select your requirements to generate a instant real-time quote estimate for your custom build.</p>
+          </div>
+
+          <div class="estimator-grid glass-card reveal">
+            <div class="estimator-controls">
+              <div class="estimator-group">
+                <label class="estimator-label">1. Select Project Type</label>
+                <div class="estimator-options-grid" id="projectTypeOptions">
+                  <button type="button" class="est-option-btn active" data-base-price="399" data-days="5" data-name="Landing Page / Promo Site">
+                    <span class="opt-title">Landing Page</span>
+                    <span class="opt-price">From $399</span>
+                  </button>
+                  <button type="button" class="est-option-btn" data-base-price="799" data-days="12" data-name="Corporate Business Website">
+                    <span class="opt-title">Corporate Site</span>
+                    <span class="opt-price">From $799</span>
+                  </button>
+                  <button type="button" class="est-option-btn" data-base-price="1299" data-days="18" data-name="E-Commerce Storefront">
+                    <span class="opt-title">E-Commerce Store</span>
+                    <span class="opt-price">From $1,299</span>
+                  </button>
+                  <button type="button" class="est-option-btn" data-base-price="1899" data-days="25" data-name="SaaS Web Application / Portal">
+                    <span class="opt-title">SaaS Web App</span>
+                    <span class="opt-price">From $1,899</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="estimator-group">
+                <label class="estimator-label">2. Delivery Speed</label>
+                <div class="estimator-speed-row" id="speedOptions">
+                  <button type="button" class="est-speed-btn active" data-multiplier="1" data-days-mod="0" data-name="Standard Speed">
+                    <span>Standard Delivery</span>
+                  </button>
+                  <button type="button" class="est-speed-btn" data-multiplier="1.2" data-days-mod="-4" data-name="Priority Express Blitz">
+                    <span>⚡ Priority Express (-30% Time)</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="estimator-group">
+                <label class="estimator-label">3. Add-on Features &amp; Modules</label>
+                <div class="estimator-checkboxes">
+                  <label class="est-checkbox-item">
+                    <input type="checkbox" class="est-feature" data-price="150" data-days="2" data-name="Custom 3D & GSAP Motion" checked />
+                    <span class="checkbox-custom"></span>
+                    <span class="feature-text">Custom 3D Canvas &amp; GSAP Motion (+ $150)</span>
+                  </label>
+                  <label class="est-checkbox-item">
+                    <input type="checkbox" class="est-feature" data-price="120" data-days="2" data-name="100/100 Lighthouse SEO Tuning" checked />
+                    <span class="checkbox-custom"></span>
+                    <span class="feature-text">100/100 Core Web Vitals &amp; SEO Schema (+ $120)</span>
+                  </label>
+                  <label class="est-checkbox-item">
+                    <input type="checkbox" class="est-feature" data-price="250" data-days="3" data-name="Admin CMS & Content Dashboard" />
+                    <span class="checkbox-custom"></span>
+                    <span class="feature-text">Custom Admin CMS / Content Dashboard (+ $250)</span>
+                  </label>
+                  <label class="est-checkbox-item">
+                    <input type="checkbox" class="est-feature" data-price="200" data-days="4" data-name="User Auth & Account System" />
+                    <span class="checkbox-custom"></span>
+                    <span class="feature-text">User Accounts &amp; Secure Authentication (+ $200)</span>
+                  </label>
+                  <label class="est-checkbox-item">
+                    <input type="checkbox" class="est-feature" data-price="180" data-days="3" data-name="Stripe / PayPal Gateway" />
+                    <span class="checkbox-custom"></span>
+                    <span class="feature-text">Payment Gateway Integration (+ $180)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="estimator-summary-card">
+              <div class="summary-header">
+                <span class="summary-badge">INSTANT CALCULATION</span>
+                <h3>Estimated Investment</h3>
+              </div>
+              <div class="summary-price-box">
+                <span class="currency-symbol">$</span>
+                <span class="price-val" id="estimatedPrice">669</span>
+                <span class="price-approx">USD (Est.)</span>
+              </div>
+              <div class="summary-time-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Estimated Timeline: <strong id="estimatedDays">7 - 9 Days</strong></span>
+              </div>
+              <div class="summary-breakdown">
+                <div class="breakdown-item"><span>Scope:</span> <strong id="summaryScope">Landing Page</strong></div>
+                <div class="breakdown-item"><span>Active Features:</span> <strong id="summaryAddons">2 Selected</strong></div>
+              </div>
+              <button type="button" class="btn btn-primary-pill btn-full" id="applyEstimateBtn">
+                <span>Apply Estimate to Contact Form</span>
+                <svg class="btn-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section class="section" id="faq">
         <div class="container">
           <div class="section-heading reveal">
@@ -1274,40 +1338,60 @@
           </div>
 
           <div class="faq-accordion reveal">
-            <details class="faq-item" open>
-              <summary>What types of web development projects do you handle?</summary>
-              <div class="faq-content">
-                <p>We build everything from custom high-converting marketing websites, portfolios, and e-commerce stores to complex SaaS web applications, client portals, and REST API backends.</p>
+            <div class="faq-item is-open">
+              <div class="faq-summary" role="button" tabindex="0">What types of web development projects do you handle?</div>
+              <div class="faq-content-wrapper">
+                <div class="faq-content">
+                  <div class="faq-content-inner">
+                    <p>We build everything from custom high-converting marketing websites, portfolios, and e-commerce stores to complex SaaS web applications, client portals, and REST API backends.</p>
+                  </div>
+                </div>
               </div>
-            </details>
+            </div>
 
-            <details class="faq-item">
-              <summary>What tech stack do you recommend for new web applications?</summary>
-              <div class="faq-content">
-                <p>We specialize in modern JavaScript frameworks (React, Next.js, Node.js) paired with fast databases (MongoDB, SQLite, PostgreSQL). For custom dynamic sites, we also utilize PHP / Laravel and WordPress depending on your team's needs.</p>
+            <div class="faq-item">
+              <div class="faq-summary" role="button" tabindex="0">What tech stack do you recommend for new web applications?</div>
+              <div class="faq-content-wrapper">
+                <div class="faq-content">
+                  <div class="faq-content-inner">
+                    <p>We specialize in modern JavaScript frameworks (React, Next.js, Node.js) paired with fast databases (MongoDB, SQLite, PostgreSQL). For custom dynamic sites, we also utilize PHP / Laravel and WordPress depending on your team's needs.</p>
+                  </div>
+                </div>
               </div>
-            </details>
+            </div>
 
-            <details class="faq-item">
-              <summary>How long does a standard web project take from kick-off to launch?</summary>
-              <div class="faq-content">
-                <p>High-converting business websites typically launch in 2 to 4 weeks. Custom web applications and complex e-commerce stores take 4 to 8 weeks depending on features and scope.</p>
+            <div class="faq-item">
+              <div class="faq-summary" role="button" tabindex="0">How long does a standard web project take from kick-off to launch?</div>
+              <div class="faq-content-wrapper">
+                <div class="faq-content">
+                  <div class="faq-content-inner">
+                    <p>High-converting business websites typically launch in 2 to 4 weeks. Custom web applications and complex e-commerce stores take 4 to 8 weeks depending on features and scope.</p>
+                  </div>
+                </div>
               </div>
-            </details>
+            </div>
 
-            <details class="faq-item">
-              <summary>Do you provide post-launch maintenance and technical support?</summary>
-              <div class="faq-content">
-                <p>Yes! We offer monthly maintenance packages covering core web vitals speed tuning, security audits, software updates, content changes, and 24/7 uptime monitoring.</p>
+            <div class="faq-item">
+              <div class="faq-summary" role="button" tabindex="0">Do you provide post-launch maintenance and technical support?</div>
+              <div class="faq-content-wrapper">
+                <div class="faq-content">
+                  <div class="faq-content-inner">
+                    <p>Yes! We offer monthly maintenance packages covering core web vitals speed tuning, security audits, software updates, content changes, and 24/7 uptime monitoring.</p>
+                  </div>
+                </div>
               </div>
-            </details>
+            </div>
 
-            <details class="faq-item">
-              <summary>Can you redesign our existing website without losing SEO rankings?</summary>
-              <div class="faq-content">
-                <p>Absolutely. We conduct full SEO url mapping, preserve 301 redirects, improve schema markup, and boost core web vitals so your organic traffic increases post-launch.</p>
+            <div class="faq-item">
+              <div class="faq-summary" role="button" tabindex="0">Can you redesign our existing website without losing SEO rankings?</div>
+              <div class="faq-content-wrapper">
+                <div class="faq-content">
+                  <div class="faq-content-inner">
+                    <p>Absolutely. We conduct full SEO url mapping, preserve 301 redirects, improve schema markup, and boost core web vitals so your organic traffic increases post-launch.</p>
+                  </div>
+                </div>
               </div>
-            </details>
+            </div>
           </div>
         </div>
       </section>
@@ -1435,12 +1519,33 @@
     <!-- Team Member Bio Pop-up Modal -->
     <div class="team-modal" id="teamModal" aria-hidden="true">
       <div class="team-modal-overlay" id="teamModalOverlay"></div>
-      <div class="team-modal-container glass-card">
+      <div class="team-modal-container glass-card" data-lenis-prevent>
         <button class="team-modal-close" id="teamModalClose" aria-label="Close modal">✕</button>
         <div class="team-modal-content" id="teamModalContent">
           <!-- Populated dynamically via JS -->
         </div>
       </div>
+    </div>
+
+    <!-- Portfolio Case Study Interactive Pop-up Modal -->
+    <div class="team-modal" id="caseModal" aria-hidden="true">
+      <div class="team-modal-overlay" id="caseModalOverlay"></div>
+      <div class="team-modal-container glass-card case-modal-box" data-lenis-prevent>
+        <button class="team-modal-close" id="caseModalClose" aria-label="Close modal">✕</button>
+        <div class="case-modal-inner" id="caseModalContent">
+          <!-- Dynamically populated via JS -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Quick Actions Widget -->
+    <div class="floating-actions" id="floatingActions">
+      <a href="https://wa.me/919824999054" target="_blank" rel="noopener" class="float-btn float-whatsapp" aria-label="WhatsApp Us">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.572-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+      </a>
+      <a href="#estimator" class="float-btn float-calculator" title="Open Cost Calculator" aria-label="Open Cost Calculator">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"></rect><line x1="8" y1="6" x2="16" y2="6"></line><line x1="16" y1="14" x2="16" y2="18"></line><path d="M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M8 18h.01M12 18h.01"></path></svg>
+      </a>
     </div>
 
     <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
