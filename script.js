@@ -8,7 +8,7 @@ if (window.Lenis) {
     orientation: 'vertical',
     gestureOrientation: 'vertical',
     smoothWheel: true,
-    wheelMultiplier: 1,
+    wheelMultiplier: 1.1,
     touchMultiplier: 2
   });
 
@@ -17,6 +17,21 @@ if (window.Lenis) {
     requestAnimationFrame(raf);
   }
   requestAnimationFrame(raf);
+
+  // Smooth scroll for internal anchor links using Lenis
+  document.addEventListener('click', (e) => {
+    const anchor = e.target.closest('a[href^="#"]');
+    if (anchor) {
+      const href = anchor.getAttribute('href');
+      if (href && href !== '#' && href.startsWith('#')) {
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          window._lenis.scrollTo(target, { offset: -80, duration: 1.2 });
+        }
+      }
+    }
+  });
 }
 
 /* ==========================================================================

@@ -29,6 +29,9 @@ body.light-theme {
 }
 
 * { box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+}
 html.lenis, html.lenis body {
   height: auto;
 }
